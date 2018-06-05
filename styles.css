@@ -1,0 +1,385 @@
+body {
+    margin: 0px;
+    margin-top: 0px;
+    background-color: #e2dec4;
+}
+
+.general {
+    display: grid;
+    grid-template-columns: repeat (12, 1fr);
+    grid-gap: 0px;
+    margin: 30px;
+    font-family: sans-serif;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    grid-column: 1;
+    grid-row: 1;
+    height: 140px;
+    background-color: #ffffff;
+}
+
+.contact {
+    float: right;
+    padding-right: 20px;
+    height: 20px;
+    color: #fff;
+    display: inline-block;
+}
+
+.contact a {
+    padding-left: 10px;
+    color: #fff;
+}
+
+.app-navbar {
+    background-color: #bcc3c3;
+    font-family: sans-serif;
+    font-size: 15px;
+    text-decoration-color: gray;
+    height: 50px;
+    display: block;
+
+}
+
+.app-dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.app-dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.app-navbar li {
+    display: inline-block;
+    min-width: 80px;
+    text-align: center;
+}
+
+li a {
+    display: inline-block;
+    color: #fff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #e2dec4;
+    text-decoration: none;
+    min-width: 80px;
+}
+
+
+.dropdown-menu {
+    box-sizing: content-box;
+    margin: 0px;
+    padding: 0px;
+    background-color: #e2dec4;
+}
+
+.dropdown-menu li a:hover {
+    display: inline-block;
+    box-sizing: content-box;
+    background-color: #e2dec4;
+    min-width: 80px;
+    border: 0px;
+    border-radius: 0px;
+    margin: 0px;
+    padding: 0px;
+    z-index: 1;
+
+}
+
+.dropdown-menu li a:hover {
+    display: inline-block;
+    box-sizing: content-box;
+    background-color: #bcc3c3;
+    min-width: 80px;
+    border: 0px;
+    border-radius: 0px;
+    margin: 0px;
+    padding: 0px;
+    z-index: 1;
+
+
+}
+
+.active,
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:focus,
+.dropdown-menu > .active > a:hover {
+    background-color: #bcc3c3;
+}
+
+.app-footer {
+    grid-row: 5;
+    grid-column: 1;
+    width: 100%;
+    background-color: #bcc3c3;
+    height: 30px;
+    font-size: 12px;
+    text-align: center;
+    display: block;
+    margin-top: 15px;
+}
+
+.containerGeneral {
+    grid-row: 3;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+    background-color: #ffffff;
+    min-height: 415px;
+    align-items: flex-start;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 16px;
+    width: 100%;
+
+    padding-top: 25px;
+    margin-top: 15px;
+}
+
+.cont1 {
+    width: 45%;
+    margin-left: 25px;
+}
+
+.cont2 {
+    width: 45%;
+    margin-left: 50px;
+    padding-top: 30px;
+}
+
+.cont3 {
+    width: 100%;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+.cont3Table {
+    width: 100%;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+.cont4 {
+    width: 45%;
+    margin-left: 25px;
+}
+
+.cont5 {
+    width: 45%;
+    margin-left: 50px;
+}
+
+
+h2 {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: bold;
+}
+body{
+  background-color: #e2dec4;
+}
+/*.table-fixed thead {
+  width: 97%;
+}
+.table-fixed tbody {
+  height: 200px;
+  overflow-y: auto;
+  width: 100%;
+}
+.table-fixed tbody, , .table-fixed td {
+  display: block;
+}
+.table-fixed tbody td, .table-fixed thead > tr> th {
+  float: left;
+  border-bottom-width: 0;
+}*/
+thead {
+    background-color: #e2dec4;
+}
+
+a {
+    color: black;
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+    display: block;
+}
+
+li {
+    box-sizing: border-box;
+}
+
+p {
+    margin-bottom: 0px;
+    padding-bottom: 10px;
+
+}
+
+.p-app-footer {
+    padding: 10px;
+}
+
+#ShowMoreBt, #ShowLessBt {
+    background-color: #e2dec4;
+    border-color: #e2dec4;
+    position: relative;
+    left: 50%;
+    display: block;
+    margin-bottom: 20px;
+}
+
+figure {
+    margin: 0;
+    transform: translate(-50%, -50%) rotate(0deg) scale(1.4, 1.4);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 150px;
+    box-sizing: border-box;
+    animation: rotation 20s infinite linear;
+}
+
+figure div:after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border: 1px solid #e2dec4;
+    box-sizing: border-box;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    animation: shuffle 2s infinite;
+}
+
+figure div:nth-child(1) {
+    transform: rotate(0deg)
+}
+
+figure div:nth-child(1):after {
+    animation-delay: -0.5s;
+}
+
+figure div:nth-child(2) {
+    transform: rotate(45deg)
+}
+
+figure div:nth-child(2):after {
+    animation-delay: -1s;
+}
+
+figure div:nth-child(3) {
+    transform: rotate(90deg)
+}
+
+figure div:nth-child(3):after {
+    animation-delay: -1.5s;
+}
+
+figure div:nth-child(4) {
+    transform: rotate(135deg)
+}
+
+figure div:nth-child(4):after {
+    animation-delay: -2s;
+}
+
+figure div:nth-child(5) {
+    transform: rotate(180deg)
+}
+
+figure div:nth-child(5):after {
+    animation-delay: -2.5s;
+}
+
+figure div:nth-child(6) {
+    transform: rotate(225deg)
+}
+
+figure div:nth-child(6):after {
+    animation-delay: -3s;
+}
+
+figure div:nth-child(7) {
+    transform: rotate(270deg)
+}
+
+figure div:nth-child(7):after {
+    animation-delay: -3.5s;
+}
+
+figure div:nth-child(8) {
+    transform: rotate(315deg)
+}
+
+figure div:nth-child(8):after {
+    animation-delay: -4;
+}
+
+@keyframes rotation {
+    100% {
+        transform: translate(-50%, -50%) rotate(-360deg) scale(1.4, 1.4);
+    }
+}
+
+@keyframes shuffle {
+    50% {
+        transform: scale(0.4, 0.4) rotate(-90deg);
+        border-radius: 50%;
+    }
+}
+
+#myBtn {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Fixed/sticky position */
+    bottom: 0px;
+    /* Place the button at the bottom of the page */
+    right: 30px;
+    /* Place the button 30px from the right */
+    z-index: 99;
+    /* Make sure it does not overlap */
+    border: none;
+    /* Remove borders */
+    outline: none;
+    /* Remove outline */
+    background-color: #bcc3c3;
+    /* Set a background color */
+    color: white;
+    /* Text color */
+    cursor: pointer;
+    /* Add a mouse pointer on hover */
+    padding: 15px;
+    /* Some padding */
+    border-radius: 0px;
+    /* Rounded corners */
+    font-size: 18px;
+    /* Increase font size */
+}
+
+#myBtn:hover {
+    background-color: #555;
+    /* Add a dark-grey background on hover */
+}

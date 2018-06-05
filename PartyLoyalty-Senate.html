@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Party Loyalty</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body data-category="senate" data-statisticsType="partyLoyalty">
+    <div class="general">
+        <div class="app-header">
+            <div class="logo">
+                <a href="https://www.whitehouse.gov/the_press_office/TransparencyandOpenGovernment"><img src="Logo.jpg" class="img-circle" alt="logo" width="160" height="140"></a>
+            </div>
+            <div class="app-navbar">
+                <ul>
+                    <li><a href="Home.html">Home</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown">Congress 113th
+                <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="Congress-Senate.html">Senate</a></li>
+                            <li><a href="Congress-House.html">House</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown">Attendance<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="Attendance-Senate.html">Senate</a></li>
+                            <li><a href="Attendance-House.html">House</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown">Party Loyalty<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li class="active"><a href="PartyLoyalty-Senate.html">Senate</a></li>
+                            <li><a href="PartyLoyalty-House.html">House</a></li>
+                        </ul>
+                    </li>
+
+                    <div class="contact">
+                        <span class="glyphicon glyphicon-envelope"></span><a href="mailto:info@tgif.net">info@tgif.net</a>
+                    </div>
+                </ul>
+            </div>
+        </div>
+        <!--Table container-->
+        <div class="loader" id="load">
+            <figure>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </figure>
+        </div>
+        <div class="containerGeneral">
+            <div class="cont1">
+                <h2>Party Loyalty</h2>
+                <p>Those who consider themselves to be strong partisans, strong Democrats and strong Republicans respectively, tend to be the most faithful in voting for their party's nominee for office and legislation that backs their party's agenda. </p>
+            </div>
+            <div class="cont2">
+                <h2>Senate at a glance</h2>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Party</th>
+                            <th>Number of Reps</th>
+                            <th>% Voted with Prty</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table1"></tbody>
+                </table>
+            </div>
+            <div class="cont4">
+                <h3>Least Loyal (Bottom 10% of Party)</h3>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Number Party Votes</th>
+                            <th>% Party Votes</th>
+                        </tr>
+                    </thead>
+                    <tbody id="partyStatisticsLess"></tbody>
+                </table>
+            </div>
+            <div class="cont5">
+                <h3>Most Loyal (Top 10% of Party)</h3>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Number Party Votes</th>
+                            <th>% Party Votes</th>
+                        </tr>
+                    </thead>
+                    <tbody id="partyStatisticsMore"></tbody>
+                </table>
+                <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+            </div>
+        </div>
+        <div class="app-footer">
+            <p><span class="glyphicon glyphicon-copyright-mark"></span>2016 TGIF. All Rights Reserved</p>
+        </div>
+    </div>
+    <!-- <script src="Data-pro-congress-113-senate.js">
+    </script>-->
+    <script src="JSstatistics.js"></script>
+</body>
+
+</html>

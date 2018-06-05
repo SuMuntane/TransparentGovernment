@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Congress 113th - House</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="stylesVue.css" rel="stylesheet" />
+    <script src="https://unpkg.com/vue"></script>
+</head>
+
+<body data-category="house">
+    <div class="general">
+        <div class="app-header">
+            <div class="logo">
+                <a href="https://www.whitehouse.gov/the_press_office/TransparencyandOpenGovernment"><img src="Logo.jpg" class="img-circle" alt="logo" width="160" height="140"></a>
+            </div>
+            <div class="app-navbar">
+                <ul>
+                    <li><a href="Home.html">Home</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown">Congress 113th
+                <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="Congress-Senate.html">Senate</a></li>
+                            <li class="active"><a href="Congress-House.html">House</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown">Attendance<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="Attendance-Senate.html">Senate</a></li>
+                            <li><a href="Attendance-House.html">House</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown">Party Loyalty<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="PartyLoyalty-Senate.html">Senate</a></li>
+                            <li><a href="PartyLoyalty-House.html">House</a></li>
+                        </ul>
+                    </li>
+
+
+                    <div class="contact">
+                        <span class="glyphicon glyphicon-envelope"></span><a href="mailto:info@tgif.net">info@tgif.net</a>
+                    </div>
+                </ul>
+            </div>
+        </div>
+        <!--Table container-->
+        <div class="loader" id="load">
+            <figure>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </figure>
+        </div>
+        <div class="containerGeneral">
+            <div class="cont1">
+                <h2>Congressmen</h2>
+                <p>The major power of the House is to pass federal legislation that affects the entire country, although its bills must also be passed by the Senate and further agreed to by the U.S. President before becoming law (unless both the House and Senate re-pass the legislation with a two-thirds majority in each chamber). The House has some exclusive powers: the power to initiate revenue bills, to impeach officials (impeached officials are subsequently tried in the Senate), and to elect the U.S. President in case there is no majority in the Electoral College.</p>
+                <p>Each U.S. state is represented in the House in proportion to its population as measured in the census, but every state is entitled to at least one representative. </p>
+            </div>
+            <div class="cont2">
+                <div id="app">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th style="width: 28%">Name</th>
+                                <th style="width: 18%">Party</th>
+                                <th style="width: 18%">State</th>
+                                <th style="width: 18%">Years in Office</th>
+                                <th style="width: 18%">Percentage of Votes %</th>
+                            </tr>
+                            <tr>
+
+                                <td></td>
+                                <td>
+                                    <form id="SelParty">
+                                        <input type="checkbox" id="rep" value="R" checked>R
+                                        <input type="checkbox" id="dem" value="D" checked>D
+                                        <input type="checkbox" id="ind" value="I" checked>I
+                                    </form>
+                                </td>
+                                <td>
+                                    <select id="state">
+                            <option value="all" ></option>
+                                        <option  v-for= "states in state" >{{state}}</option></select>
+                                </td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr v-for="member in members">
+                                <td><a v-bind:href="member.url" target="_blank"> {{member.first_name}} {{ member.middle_name}}{{ member.last_name}}</a></td>
+                                <td> {{member.party}}</td>
+                                <td>{{member.state}}</td>
+                                <td>{{member.seniority}}</td>
+                                <td>{{member.votes_with_party_pct}}</td>
+                            </tr>
+                        </tbody>
+                        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+                    </table>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="app-footer">
+            <p class="p-app-footer"><span class="glyphicon glyphicon-copyright-mark"></span>2016 TGIF. All Rights Reserved</p>
+        </div>
+
+    </div>
+    <!--    <script src="Data-pro-congress-113-house.js"></script>-->
+    <script src="JSfunctions.js"></script>
+    <!-- <a href="http://jquery.com/">jQuery</a>
+    <script src="jquery.js"></script>-->
+
+</body>
+
+</html>
